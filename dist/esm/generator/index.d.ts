@@ -10,6 +10,7 @@ export interface GenerateOpenApiDocumentOptions {
     tags?: string[];
     securitySchemes?: Record<string, SecuritySchemeObject>;
     paths?: ZodOpenApiPathsObject;
+    saveToFile?: string;
 }
 export declare const generateOpenApiDocument: (appRouter: OpenApiRouter, opts: GenerateOpenApiDocumentOptions) => OpenAPIObject;
 //# sourceMappingURL=index.d.ts.map
