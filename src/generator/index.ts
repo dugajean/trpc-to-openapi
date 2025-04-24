@@ -51,11 +51,9 @@ export const generateOpenApiDocument = (
   if (opts.saveToFile) {
     try {
       const dirName = path.dirname(opts.saveToFile);
-      
       if (!fs.existsSync(dirName)) {
         fs.mkdirSync(dirName, { recursive: true });
       }
-      
       fs.writeFileSync(
         opts.saveToFile, 
         JSON.stringify(document, null, 2), 
