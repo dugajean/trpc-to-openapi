@@ -57,7 +57,7 @@ export const generateOpenApiDocument = (
       fs.writeFileSync(
         opts.saveToFile, 
         JSON.stringify(document, null, 2), 
-        { encoding: 'utf8' }
+        { encoding: 'utf8', flag: 'w' }
       );
       console.log(`OpenAPI document saved to: ${opts.saveToFile}`);
     } catch (error) {

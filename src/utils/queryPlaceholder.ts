@@ -1,5 +1,4 @@
 import {
-  z,
   ZodTypeAny,
   ZodObject,
   ZodOptional,
@@ -14,7 +13,7 @@ import {
   ZodRecord
 } from 'zod';
 
-export function queryPlaceholder(schema: ZodTypeAny): any {
+export function queryPlaceholder<TSchema extends ZodTypeAny>(schema: TSchema): unknown {
   const baseSchema = schema instanceof ZodEffects ? schema._def.schema : schema;
 
   if (baseSchema instanceof ZodDefault) {
